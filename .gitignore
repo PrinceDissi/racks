@@ -1,0 +1,12 @@
+# Exclude custom test components
+elements/my-element.html
+elements/nav-bar.html
+
+# Index file in HTML
+index.html
+
+# Other varia filetypes
+*.DS_STORE
+*.temp
+*.log
+*.my
