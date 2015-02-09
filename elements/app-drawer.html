@@ -1,0 +1,31 @@
+<!-- Import Racks -->
+<link rel="import" href="/racks/elements/racks.html">
+
+<!-- Define your custom element -->
+<racks-element name="app-drawer">
+    <style>
+    :host p {
+        color:red;
+    }
+    </style>
+    <template>
+        <content></content>
+    </template>
+    <script>
+    Racks('app-drawer', {
+        // Fires when an instance of the element is created
+        created: function(self) {},
+        // Fires when the element’s initial set of children and siblings are guaranteed to exist
+        domReady: function(self) {},
+        // Fires when the "<polymer-element>" has been fully prepared
+        ready: function(self) {},
+        // Fires when the element was inserted into the document
+        attached: function(self) {
+        },
+        // Fires when the element was removed from the document
+        detached: function(self) {},
+        // Fires when an attribute was added, removed, or updated
+        attributeChanged: function(attr, oldVal, newVal) {}
+    });
+    </script>
+</racks-element>
