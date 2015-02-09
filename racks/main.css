@@ -1,0 +1,27 @@
+body {
+    font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+    color: #000;
+    font-weight: 300;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 500;
+}
+
+.icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+}
+
+/* Basic styling for all racks components */
+docs-sidebar,
+main-app {
+    display: block;
+    unicode-bidi: embed;
+    font-family: inherit;
+    color: inherit;
+    width: auto;
+    height: auto;
+}

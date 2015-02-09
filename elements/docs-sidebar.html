@@ -1,0 +1,44 @@
+<link rel="import" href="/racks/elements/racks.html">
+<racks-element name="docs-sidebar">
+    <style>
+    :host ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        list-style-type: none;
+    }
+
+    :host ul a {
+        display: block;
+        text-decoration: none;
+        color: inherit;
+    }
+    </style>
+    <template>
+        <ul>
+            <li>
+                <a href="">
+                    <img src="<%src%>eye.svg">
+                    Getting Started
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="icon-printer"></i>
+                    Guides &amp; Resources
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="icon-box"></i>
+                    Components
+                </a>
+            </li>
+        </ul>
+    </template>
+    <script>
+        Racks('docs-sidebar', {
+            src: '/racks/assets/ico/'
+        });
+    </script>
+</racks-element>
