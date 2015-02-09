@@ -1,20 +1,25 @@
 <link rel="import" href="/racks/elements/racks.html">
-<racks-element name="racks-logo">
+<racks-element name="racks-title">
     <style>
     :host {
         overflow: hidden;
+        line-height: 50px;
+        color: #aaa;
     }
     :host h1,
     :host img {
         float: left;
     }
+    :host img {
+        width: 50px;
+    }
     </style>
     <template>
         <img src="/racks/assets/img/rocket.png" alt="Racks logo">
-        <h1>Racks</h1>
+        <content select="h1"></content>
     </template>
     <script>
-    Racks('racks-logo');
+    Racks('racks-title');
     </script>
 </racks-element>
-<racks-logo></racks-logo>
+<racks-title></racks-title>

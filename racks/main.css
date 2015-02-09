@@ -1,11 +1,20 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
 body {
     font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
     color: #000;
     font-weight: 300;
+    overflow: hidden;
 }
 
 h1,h2,h3,h4,h5,h6 {
-    font-weight: 500;
+    font-weight: 400;
+    margin: 0;
 }
 
 .icon {
@@ -15,13 +24,14 @@ h1,h2,h3,h4,h5,h6 {
     fill: currentColor;
 }
 
-/* Basic styling for all racks components */
-docs-sidebar,
-main-app {
-    display: block;
-    unicode-bidi: embed;
-    font-family: inherit;
-    color: inherit;
-    width: auto;
-    height: auto;
-}
+/* Colors
+ * ====================
+ * Pink light:  #fe6075
+ * Pink dark:   #b94554
+ * Gray light:  #dfe2e4
+ * Gray dark:   #bdc3c7
+ * Blue light:  #527496
+ * Blue dark:   #2c3e50
+ * Yellow:      #f1c40f
+ * Orange:      #f39c12
+ *

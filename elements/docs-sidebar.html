@@ -1,13 +1,16 @@
 <link rel="import" href="/racks/elements/racks.html">
 <racks-element name="docs-sidebar">
     <style>
+    :host {
+        position: fixed;
+        width: 200px;
+    }
     :host ul {
         padding: 0;
         margin: 0;
         list-style: none;
         list-style-type: none;
     }
-
     :host ul a {
         display: block;
         text-decoration: none;
@@ -15,23 +18,12 @@
     }
     </style>
     <template>
+        <content></content>
         <ul>
             <li>
-                <a href="">
-                    <img src="<%src%>eye.svg">
+                <a href="#">
+                    <i class="icon-eye"></i>
                     Getting Started
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    <i class="icon-printer"></i>
-                    Guides &amp; Resources
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    <i class="icon-box"></i>
-                    Components
                 </a>
             </li>
         </ul>
