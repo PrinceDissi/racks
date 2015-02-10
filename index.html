@@ -2,19 +2,28 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <meta name="author" content="Jan Biasi">
     <link rel="shortcut icon" type="image/png" href="assets/img/rocket.png?v=1">
     <title>Racks - Custom Elements</title>
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500' rel='stylesheet' type='text/css'>
     <link href="assets/icomoon/style.css" rel="stylesheet">
     <link href="racks/main.css" rel="stylesheet">
     <link href="racks/components.css" rel="stylesheet">
+    <!-- polyfills -->
+    <script src="bower_components/webcomponents.js/webcomponents.min.js"></script>
     <script src="src/racks-polyfill.js"></script>
+    <!-- core elements -->
+    <link rel="import" href="elements/core-menu.html">
+    <link rel="import" href="elements/core-button.html">
+    <!-- layout elements -->
     <link rel="import" href="elements/app-drawer.html">
+    <!-- documentation elements -->
     <link rel="import" href="elements/docs-sidebar.html">
     <link rel="import" href="elements/docs-menu.html">
     <link rel="import" href="elements/docs-content.html">
     <link rel="import" href="elements/docs-header.html">
-    <link rel="import" href="elements/core-menu.html">
+    <!-- custom elements -->
+    <link rel="import" href="elements/details-toc.html">
     <link rel="import" href="elements/racks-title.html">
 </head>
 <body>
@@ -26,9 +35,9 @@
                         <li data-color="blue">
                             <a href="#" class="trigger-sub-menu">
                                 <i class="icon-eye"></i>
-                                Getting Started
+                                <span>Getting Started</span>
                             </a>
-                            <ul class="hidden">
+                            <ul class="hidden final">
                                 <li>
                                     <a href="#">Getting the Code</a>
                                 </li>
@@ -46,9 +55,9 @@
                         <li data-color="pink">
                             <a href="#">
                                 <i class="icon-printer"></i>
-                                Resources &amp; Manual
+                                <span>Resources &amp; Manual</span>
                             </a>
-                            <ul class="hidden">
+                            <ul class="hidden final">
                                 <li>
                                     <a href="#">API developer Guide</a>
                                 </li>
@@ -72,9 +81,9 @@
                         <li data-color="orange">
                             <a href="#">
                                 <i class="icon-box"></i>
-                                Elements
+                                <span>Components</span>
                             </a>
-                            <ul class="hidden">
+                            <ul class="hidden final">
                                 <li>
                                     <a href="#">Element Guides</a>
                                 </li>
@@ -92,10 +101,68 @@
         </docs-sidebar>
         <docs-content>
             <docs-header>
-                <h1>Title</h1>
+                <h1>Section title</h1>
+                <span>version</span>
+                <p>Category</p>
             </docs-header>
             <main>
-                
+                <details-toc>
+                    <summary>Table of Content</summary>
+                </details-toc>
+                <h2>Article Title</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                    sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                    magna aliquyam erat, sed diam voluptua. At vero eos et
+                    accusam et justo duo dolores et ea rebum. Stet clita kasd
+                    gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                    sit amet.
+                </p>
+                <h3>A Subtitle in Document</h3>
+                <p>
+                    Lorem ipsum dolor <strong>sit amet, consetetur sadipscing</strong>
+                    elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+                    dolore <em>magna aliquyam erat</em>, sed diam voluptua.
+                    At vero eos et accusam et justo duo dolores et ea rebum.
+                    Stet clita kasd <mark>gubergren</mark>, no sea
+                    takimata sanctus est Lorem ipsum dolor sit amet.
+                </p>
+                <core-button class="primary">
+                    <a href="#">
+                        <i class="icon-briefcase"></i>
+                        Primary Button
+                    </a>
+                </core-button>
+                <core-button class="pink">
+                    <a href="#">
+                        <i class="icon-location"></i>
+                        Pink Button
+                    </a>
+                </core-button>
+                <core-button class="orange">
+                    <a href="#">
+                        <i class="icon-cloud-upload"></i>
+                        Orange Button
+                    </a>
+                </core-button>
+                <core-button class="default">
+                    <a href="#">
+                        <i class="icon-archive"></i>
+                        Default Button
+                    </a>
+                </core-button>
+                <core-button class="yellow">
+                    <a href="#">
+                        <i class="icon-anchor"></i>
+                        Yellow Button
+                    </a>
+                </core-button>
+                <core-button class="dark">
+                    <a href="#">
+                        <i class="icon-microphone"></i>
+                        Dark Button
+                    </a>
+                </core-button>
             </main>
         </docs-content>
     </app-drawer>
