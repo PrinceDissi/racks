@@ -184,15 +184,12 @@
                     // Put element class and style to the specified parent
                     var wrapper = document.createElement('i');
                     wrapper.className = el.className + ' waves-input-wrapper';
-
                     var elementStyle = el.getAttribute('style');
 
                     if (!elementStyle) {
                         elementStyle = '';
                     }
-
                     wrapper.setAttribute('style', elementStyle);
-
                     el.className = 'waves-button-input';
                     el.removeAttribute('style');
 
@@ -216,13 +213,12 @@
         touches: 0,
         allowEvent: function(e) {
             var allow = true;
-
             if (e.type === 'touchstart') {
-                TouchHandler.touches += 1; //push
+                TouchHandler.touches += 1;
             } else if (e.type === 'touchend' || e.type === 'touchcancel') {
                 setTimeout(function() {
                     if (TouchHandler.touches > 0) {
-                        TouchHandler.touches -= 1; //pop after 500ms
+                        TouchHandler.touches -= 1;
                     }
                 }, 500);
             } else if (e.type === 'mousedown' && TouchHandler.touches > 0) {
@@ -245,10 +241,8 @@
         if (TouchHandler.allowEvent(e) === false) {
             return null;
         }
-
         var element = null;
         var target = e.target || e.srcElement;
-
         while (target.parentElement !== null) {
             if (target.className.indexOf('waves-effect') !== -1 ||
                 target.tagName.toLowerCase() == 'racks-button') {
@@ -257,7 +251,6 @@
             }
             target = target.parentElement;
         }
-
         return element;
     }
 
@@ -266,15 +259,12 @@
     */
     function showEffect(e) {
         var element = getWavesEffectElement(e);
-
         if (element !== null) {
             Effect.show(e, element);
-
             if ('ontouchstart' in window) {
                 element.addEventListener('touchend', Effect.hide, false);
                 element.addEventListener('touchcancel', Effect.hide, false);
             }
-
             element.addEventListener('mouseup', Effect.hide, false);
             element.addEventListener('mouseleave', Effect.hide, false);
         }
@@ -282,31 +272,25 @@
 
     Waves.displayEffect = function(options) {
         options = options || {};
-
         if ('duration' in options) {
             Effect.duration = options.duration;
         }
 
         // Wrap input inside <i> tag
         Effect.wrapInput($$('input.waves-effect'));
-
-
         if ('ontouchstart' in window) {
             document.body.addEventListener('touchstart', showEffect, false);
         }
-
         document.body.addEventListener('mousedown', showEffect, false);
     };
 
     /**
     * Attach Waves to an input element (or any element which doesn't
-    * bubble mouseup/mousedown events).
-    *   Intended to be used with dynamically loaded forms/inputs, or
-    * where the user doesn't want a delegated click handler.
+    * bubble mouseup/mousedown events). Intended to be used with
+    * dynamically loaded forms/inputs, or where the user doesn't
+    * want a delegated click handler.
     */
     Waves.attach = function(element) {
-        //FUTURE: automatically add waves classes and allow users
-        // to specify them with an options param? Eg. light/classic/button
         if (element.tagName.toLowerCase() === 'input') {
             Effect.wrapInput([element]);
             element = element.parentElement;
@@ -319,8 +303,7 @@
         element.addEventListener('mousedown', showEffect, false);
     };
 
-    window.Waves = Waves;
-
+    // Wait for loaded web-components imports
     document.addEventListener('HTMLImportsLoaded', function() {
         Waves.displayEffect();
     }, false);

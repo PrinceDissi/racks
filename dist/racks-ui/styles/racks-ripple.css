@@ -26,13 +26,19 @@ racks-button .waves-ripple  {
 }
 
 .waves-effect.waves-dark .waves-ripple,
-racks-button.waves-dark .waves-ripple {
+racks-button.waves-dark .waves-ripple,
+racks-button.flat .waves-ripple {
     background-color: rgba(0, 0, 0, 0.2);
 }
 
 .waves-effect.waves-red .waves-ripple,
 racks-button.waves-red .waves-ripple {
     background-color: rgba(244, 67, 54, 0.7);
+}
+
+.waves-effect.waves-darker .waves-ripple,
+racks-button.default .waves-ripple {
+    background-color: rgba(180, 180, 180, 0.7);
 }
 
 .waves-effect.waves-yellow .waves-ripple,
