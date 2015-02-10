@@ -11,15 +11,94 @@
     <script src="src/racks-polyfill.js"></script>
     <link rel="import" href="elements/app-drawer.html">
     <link rel="import" href="elements/docs-sidebar.html">
+    <link rel="import" href="elements/docs-menu.html">
+    <link rel="import" href="elements/docs-content.html">
+    <link rel="import" href="elements/docs-header.html">
+    <link rel="import" href="elements/core-menu.html">
     <link rel="import" href="elements/racks-title.html">
 </head>
 <body>
     <app-drawer>
         <docs-sidebar>
-            <racks-title>
-                <h1>Racks</h1>
-            </racks-title>
+            <docs-menu>
+                <core-menu>
+                    <ul class="submenu">
+                        <li data-color="blue">
+                            <a href="#" class="trigger-sub-menu">
+                                <i class="icon-eye"></i>
+                                Getting Started
+                            </a>
+                            <ul class="hidden">
+                                <li>
+                                    <a href="#">Getting the Code</a>
+                                </li>
+                                <li>
+                                    <a href="#">Racks in 5 Minutes</a>
+                                </li>
+                                <li>
+                                    <a href="#">Your first App</a>
+                                </li>
+                                <li>
+                                    <a href="#">Understanding It</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li data-color="pink">
+                            <a href="#">
+                                <i class="icon-printer"></i>
+                                Resources &amp; Manual
+                            </a>
+                            <ul class="hidden">
+                                <li>
+                                    <a href="#">API developer Guide</a>
+                                </li>
+                                <li>
+                                    <a href="#">Helper methods</a>
+                                </li>
+                                <li>
+                                    <a href="#">Styling elements</a>
+                                </li>
+                                <li>
+                                    <a href="#">Debugging tips and tricks</a>
+                                </li>
+                                <li>
+                                    <a href="#">Community</a>
+                                </li>
+                                <li>
+                                    <a href="#">Resources</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li data-color="orange">
+                            <a href="#">
+                                <i class="icon-box"></i>
+                                Elements
+                            </a>
+                            <ul class="hidden">
+                                <li>
+                                    <a href="#">Element Guides</a>
+                                </li>
+                                <li>
+                                    <a href="#">Core elements</a>
+                                </li>
+                                <li>
+                                    <a href="#">Design elements</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </core-menu>
+            </docs-menu>
         </docs-sidebar>
+        <docs-content>
+            <docs-header>
+                <h1>Title</h1>
+            </docs-header>
+            <main>
+                
+            </main>
+        </docs-content>
     </app-drawer>
+    <script src="assets/base/jquery-1.11.1.min.js"></script>
 </body>
 </html>
