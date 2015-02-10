@@ -50,6 +50,14 @@
             padding: 20px;
         }
 
+        :host(.rounded) {
+            border-radius: 50%;
+            -moz-border-radius: 50%;
+            -webkit-border-radius: 50%;
+            min-width: 3vw;
+            min-height: 3vw;
+        }
+
         :host(.primary),
         :host(.pink),
         :host(.yellow),
@@ -58,7 +66,8 @@
             color: #fff;
         }
 
-        :host([no-shadow]) {
+        :host([no-shadow]),
+        :host(.flat) {
             box-shadow: none;
             -moz-box-shadow: none;
             -webkik-box-shadow: none;
