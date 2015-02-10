@@ -1,5 +1,5 @@
 #Racks Components
-###Notes
+###General Information
 #####Attributes
 Racks attributes are placed on top of the rack elements, such as the <code>href</code> attribute on the [link](#this-was-an-attr) element. For example take a look at the following code snippet;
 ```html
@@ -18,18 +18,19 @@ There are different types of settings or parameters which can be passed to racks
 | attr    | Attribute type, take a look at (Attributes)(#attributes) |
 | class   | Specific classes to use on the element with <code>class=""</code>|
 | data    | Custom data attributed, starting with <code>data-</code> |
+| method  | A function which can be called on an instanciated object |
 
 
 
 ###Racks Button
-| Attribute | Required | Type  | Description         |
-|-----------|----------|-------|---------------------|
-| no-shadow | no       | attr  | Add to prevent box-shadow |
-| no-effect | no       | class | Disables the riffle/wave animation on tap |
-| large     | no       | class | Makes the button large |
-| primary   | no       | class | Creates a primary button |
-| default   | no       | class | Creates a default gray button |
-| pink      | no       | class | The awesome pink button |
-| yellow    | no       | class | The awesome yellow button |
-| orange    | no       | class | The awesome orange button |
-| dark      | no       | class | The awesome dark-blue button |
+| Definition | Required | Type  | Description         |
+|------------|----------|-------|---------------------|
+| no-shadow  | no       | attr  | Add to prevent box-shadow |
+| no-effect  | no       | class | Disables the riffle/wave animation on tap |
+| large      | no       | class | Makes the button large |
+| primary    | no       | class | Creates a primary button |
+| default    | no       | class | Creates a default gray button |
+| pink       | no       | class | The awesome pink button |
+| yellow     | no       | class | The awesome yellow button |
+| orange     | no       | class | The awesome orange button |
+| dark       | no       | class | The awesome dark-blue button |
