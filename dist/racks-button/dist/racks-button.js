@@ -18,8 +18,24 @@
         var shadowRoot = this.createShadowRoot();
         shadowRoot.appendChild(template.cloneNode(true));
 
+        // native offset implementation
+        function offset(obj) {
+            var ol = ot = 0;
+            if (obj.offsetParent) {
+                do {
+                    ol += obj.offsetLeft;
+                    ot += obj.offsetTop;
+                } while (obj = obj.offsetParent);
+            }
+            return {
+                left: ol,
+                top: ot
+            };
+        }
+
+        // set an ARIA role, for more infor, see w3c specs
         this.setAttribute('role', 'button');
-    }
+    };
 
     if(!window.RacksButtonElement) {
         window.RacksButtonElement = document.registerElement('racks-button', {
