@@ -1,3 +1,17 @@
+ul, ol, dl,
+div, p, a {
+    margin: 0;
+    padding: 0;
+}
+
+ul, ol, dl {
+    list-style-type: none;
+}
+
+body *.hidden {
+    display: none;
+}
+
 body,
 html {
     margin: 0;
@@ -10,6 +24,7 @@ body {
     color: #000;
     font-weight: 300;
     overflow: hidden;
+    font-size: 14px;
 }
 
 h1,h2,h3,h4,h5,h6 {

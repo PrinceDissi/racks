@@ -1,1 +1,50 @@
+docs-sidebar ul.submenu > li {
+    border-top: 1px solid #ccc;
+}
 
+docs-sidebar ul.submenu > li a {
+    display: block;
+    color: #424242;
+    text-decoration: none;
+    transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -webkit-transition: all .2s linear;
+}
+
+docs-sidebar ul.submenu > li > a {
+    padding: 15px;
+}
+
+docs-sidebar ul.submenu li i {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+docs-sidebar ul.submenu li.active > a {
+    font-weight: 500;
+}
+
+docs-sidebar ul.submenu li.active.pink > a {
+    color: #fe6075;
+}
+
+docs-sidebar ul.submenu li.active.blue > a {
+    color: #527496;
+}
+
+docs-sidebar ul.submenu li.active.orange > a {
+    color: #f39c12;
+}
+
+/* Sublist styling */
+docs-sidebar ul.submenu ul > li {
+    padding: 10px;
+}
+
+docs-sidebar ul.submenu ul > li:first-child {
+    padding-top: 0;
+}
+
+docs-sidebar ul.submenu ul > li:last-child {
+    padding-bottom: 20px;
+}
