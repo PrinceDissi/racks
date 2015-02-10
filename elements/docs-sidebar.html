@@ -1,32 +1,34 @@
 <link rel="import" href="/racks/elements/racks.html">
+<link rel="stylesheet" href="/racks/assets/icomoon/style.css">
 <racks-element name="docs-sidebar">
     <style>
-    :host {
-        position: fixed;
-        width: 200px;
-    }
-    :host ul {
-        padding: 0;
-        margin: 0;
-        list-style: none;
-        list-style-type: none;
-    }
-    :host ul a {
-        display: block;
-        text-decoration: none;
-        color: inherit;
-    }
+        :host {
+            position: fixed;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 250px;
+            height: 100%;
+            background-color: #eee;
+        }
+        :host racks-title {
+            margin: 0;
+            display: block;
+            padding: 20px;
+            width: 100%;
+        }
+        :host racks-title h1 {
+            margin: 0;
+            font-weight: 300;
+        }
     </style>
     <template>
-        <content></content>
-        <ul>
-            <li>
-                <a href="#">
-                    <i class="icon-eye"></i>
-                    Getting Started
-                </a>
-            </li>
-        </ul>
+        <racks-title>
+            <h1>Racks</h1>
+        </racks-title>
+        <div class="menu-container">
+            <content></content>
+        </div>
     </template>
     <script>
         Racks('docs-sidebar', {

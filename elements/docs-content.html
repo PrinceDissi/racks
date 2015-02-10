@@ -1,0 +1,26 @@
+<link rel="import" href="/racks/elements/racks.html">
+<racks-element name="docs-content">
+    <style>
+    :host {
+        display: block;
+        width: 100%;
+        height: 100%;
+        margin-left: 250px;
+    }
+    </style>
+    <template>
+        <div class="header">
+            <content select="docs-header"></content>
+        </div>
+        <main>
+            <content select="main"></content>
+        </main>
+    </template>
+    <script>
+        Racks('docs-content', {
+            domReady: function(self) {
+
+            }
+        });
+    </script>
+</racks-element>
