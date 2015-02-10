@@ -1,0 +1,24 @@
+<link rel="import" href="/racks/elements/racks.html">
+<racks-element name="core-code">
+    <style>
+    :host {
+        display: block;
+        width: 100%;
+        background-color: #bdc3c7;
+    }
+    </style>
+    <template>
+<pre><code>
+    <content></content>
+</code></pre>
+    </template>
+    <script>
+        Racks('core-code', {
+            domReady: function() {
+                $('core-code').each(function() {
+
+                });
+            }
+        });
+    </script>
+</racks-element>

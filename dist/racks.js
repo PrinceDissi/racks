@@ -5,7 +5,7 @@
  * Shadow DOM technologs. Licensed 2015 under the
  * MIT Licese, all rights reserved.
  */
-;(function($application, _undefined) {
+;(function(window, _undefined) {
     var noop = function() {};
 
     var racks = {
@@ -52,7 +52,7 @@
     };
 
     var isRegistered = function(component) {
-        return $application.racks.registered.indexOf(component) >= 0;
+        return window.racks.registered.indexOf(component) >= 0;
     };
 
     var onready = function(handler) {
@@ -125,7 +125,7 @@
 
     var racksConstructor = function(name, racksProto) {
         if(!isRegistered(name)) {
-            $application.racks.registered.push(name);
+            window.racks.registered.push(name);
             return document.registerElement(name, {
                 prototype: racksProto
             });
@@ -185,8 +185,8 @@
     };
 
     function RacksRoot() {
-        if($application.Rack && $application.Rack.Root) {
-            throw new RacksError('Root for Rack already exists in $application');
+        if(window.Rack && window.Rack.Root) {
+            throw new RacksError('Root for Rack already exists in window');
         }
         var proto = Object.create(HTMLElement.prototype);
         proto.createdCallback = function() {
@@ -199,18 +199,16 @@
             createFactory(name, template[0], style[0], this);
         }
 
+
         if(!isRegistered('racks-element')) {
-            $application.racks.registered.push('racks-element');
+            window.racks.registered.push('racks-element');
             document.registerElement('racks-element', {
                 prototype: proto
             });
         }
     }
 
-    $application.Racks = Racks;
-    $application.racks = racks;
-    $application.Racks.Root = racks.create.root();
-
-
-
+    window.Racks = Racks;
+    window.racks = racks;
+    window.Racks.Root = racks.create.root();
 })(window);

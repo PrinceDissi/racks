@@ -71,3 +71,7 @@ if (!Array.prototype.indexOf) {
         return -1;
     };
 }
+
+String.prototype.ltrim = function() {
+    return this.replace(/^\s+/,"");
+}

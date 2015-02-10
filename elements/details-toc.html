@@ -62,7 +62,6 @@
 
                 // Open/Close the list
                 $capt.on('click', function() {
-                    console.log('asd')
                     $list.slideToggle();
                 });
 
@@ -71,23 +70,20 @@
                     var it = '<li ';
                     it += 'class="level-' + lvl + '"><a ';
                     it += 'href="#' + node.attr('id') + '">';
-                    if(last == null) {
-                        it += (lvl + 1) + '. ' + node.text();
-                    } else {
-                        it += last + '.' + lvl + ' ' + node.text();
-                    }
+                    it += node.text();
                     it += '</a></li>';
                     return it;
                 };
 
                 // Generate the list
                 var $hs = $('h2,h3,h4,h5,h6'),
-                last = null;
+                last = null, i = 0;
                 $hs.each(function() {
+                    i++;
                     var $tag = $(this), toc = [];
                     if($tag.is('h2')) {
                         toc.push(listItem($tag, 2, last));
-                        last = 1;
+                        last = null;
                     } else if($tag.is('h3')) {
                         toc.push(listItem($tag, 3, last));
                         last = '2';

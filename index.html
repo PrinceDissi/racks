@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!-- polyfills -->
+    <script src="bower_components/webcomponents.js/webcomponents.js"></script>
+    <script src="src/racks-polyfill.js"></script>
     <meta charset="utf-8">
     <meta name="author" content="Jan Biasi">
     <link rel="shortcut icon" type="image/png" href="assets/img/rocket.png?v=1">
@@ -9,12 +12,10 @@
     <link href="assets/icomoon/style.css" rel="stylesheet">
     <link href="racks/main.css" rel="stylesheet">
     <link href="racks/components.css" rel="stylesheet">
-    <!-- polyfills -->
-    <script src="bower_components/webcomponents.js/webcomponents.min.js"></script>
-    <script src="src/racks-polyfill.js"></script>
     <!-- core elements -->
     <link rel="import" href="elements/core-menu.html">
     <link rel="import" href="elements/core-button.html">
+    <link rel="import" href="elements/core-code.html">
     <!-- layout elements -->
     <link rel="import" href="elements/app-drawer.html">
     <!-- documentation elements -->
@@ -32,12 +33,12 @@
             <docs-menu>
                 <core-menu>
                     <ul class="submenu">
-                        <li data-color="blue">
+                        <li data-color="blue" class="active blue">
                             <a href="#" class="trigger-sub-menu">
                                 <i class="icon-eye"></i>
                                 <span>Getting Started</span>
                             </a>
-                            <ul class="hidden final">
+                            <ul class="final">
                                 <li>
                                     <a href="#">Getting the Code</a>
                                 </li>
@@ -101,68 +102,37 @@
         </docs-sidebar>
         <docs-content>
             <docs-header>
-                <h1>Section title</h1>
-                <span>version</span>
-                <p>Category</p>
+                <h1>Getting Started</h1>
+                <span>dev preview</span>
+                <p>Basics</p>
             </docs-header>
             <main>
                 <details-toc>
                     <summary>Table of Content</summary>
                 </details-toc>
-                <h2>Article Title</h2>
+                <h2>Compatibility</h2>
                 <p>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
-                    sed diam nonumy eirmod tempor invidunt ut labore et dolore
-                    magna aliquyam erat, sed diam voluptua. At vero eos et
-                    accusam et justo duo dolores et ea rebum. Stet clita kasd
-                    gubergren, no sea takimata sanctus est Lorem ipsum dolor
-                    sit amet.
-                </p>
-                <h3>A Subtitle in Document</h3>
-                <p>
-                    Lorem ipsum dolor <strong>sit amet, consetetur sadipscing</strong>
-                    elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-                    dolore <em>magna aliquyam erat</em>, sed diam voluptua.
-                    At vero eos et accusam et justo duo dolores et ea rebum.
-                    Stet clita kasd <mark>gubergren</mark>, no sea
-                    takimata sanctus est Lorem ipsum dolor sit amet.
+                    Racks is currently only supported in Google Chrome and no other
+                    browser due WebComponents compatibility. I'll work on a version
+                    and/or polyfills for other browsers, alternately, a JavaScript
+                    only version will eventually replace this version with the tempaltes.
                 </p>
                 <core-button class="primary">
-                    <a href="#">
-                        <i class="icon-briefcase"></i>
-                        Primary Button
+                    <a href="https://github.com/janbiasi/racks">
+                        <i class="icon-arrow-right"></i>
+                        View on GitHub
                     </a>
                 </core-button>
-                <core-button class="pink">
-                    <a href="#">
-                        <i class="icon-location"></i>
-                        Pink Button
-                    </a>
-                </core-button>
-                <core-button class="orange">
-                    <a href="#">
-                        <i class="icon-cloud-upload"></i>
-                        Orange Button
-                    </a>
-                </core-button>
-                <core-button class="default">
-                    <a href="#">
-                        <i class="icon-archive"></i>
-                        Default Button
-                    </a>
-                </core-button>
-                <core-button class="yellow">
-                    <a href="#">
-                        <i class="icon-anchor"></i>
-                        Yellow Button
-                    </a>
-                </core-button>
-                <core-button class="dark">
-                    <a href="#">
-                        <i class="icon-microphone"></i>
-                        Dark Button
-                    </a>
-                </core-button>
+                <br/>
+                <h2>Basic Usage</h2>
+                <p>
+                    First you need to load the polyfill from bower or GitHub.
+                </p>
+                <p> Afterwardsyou can start writing your own rack components. Then you have to
+                    include all the components via an import link into the index or
+                    application file, like this
+                </p>
+                <script src="https://gist.github.com/janbiasi/fee3e3be6a232c6fad74.js"></script>
             </main>
         </docs-content>
     </app-drawer>
