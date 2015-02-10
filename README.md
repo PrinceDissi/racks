@@ -34,3 +34,17 @@ There are different types of settings or parameters which can be passed to racks
 | yellow     | no       | class | The awesome yellow button |
 | orange     | no       | class | The awesome orange button |
 | dark       | no       | class | The awesome dark-blue button |
+
+###Racks Layout
+*No additional information found*
+
+###Racks Dialog
+*No additional information found*
+
+###Racks Appbar
+*No additional information found*
+
+###Racks Menu
+| Definition | Required | Type  | Description         |
+|------------|----------|-------|---------------------|
+| horizontal | no       | attr  | Used for creating traditional menus |
