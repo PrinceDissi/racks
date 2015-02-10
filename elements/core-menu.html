@@ -24,6 +24,8 @@
                         $(this).find('ul').slideUp()
                         $(this).removeClass('active');
                         return;
+                    } else if($(this).closest('ul').hasClass('final')) {
+                        return false;
                     } else {
                         $callee.removeClass('active');
                         $('core-menu').find('ul ul').slideUp();
