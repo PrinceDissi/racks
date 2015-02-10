@@ -1,0 +1,30 @@
+<link rel="import" href="../../racks-common/racks-common.html">
+<link rel="import" href="../../racks-action/dist/racks-action.html">
+
+<template id="racks-button-template">
+    <style>
+        :host {
+            display: inline-block;
+            position: relative;
+            border: 0;
+            background: transparent;
+            text-align: center;
+            outline: none;
+            border-radius: 3px;
+            -moz-border-radius: 3px;
+            -webkit-border-radius: 3px;
+            -webkit-user-select: none;
+            user-select: none;
+            cursor: pointer;
+            padding: 15px;
+        }
+        :host([disabled]) {
+            color: #808080;
+            pointer-events: none;
+            cursor: auto;
+        }
+    </style>
+    <content></content>
+</template>
+
+<script src="racks-button.js"></script>
