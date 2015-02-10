@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'icomoon';
-	src:url('fonts/icomoon.eot?re025g');
-	src:url('fonts/icomoon.eot?#iefixre025g') format('embedded-opentype'),
-		url('fonts/icomoon.woff?re025g') format('woff'),
-		url('fonts/icomoon.ttf?re025g') format('truetype'),
-		url('fonts/icomoon.svg?re025g#icomoon') format('svg');
+	src:url('/racks/assets/icomoon/fonts/icomoon.eot?re025g');
+	src:url('/racks/assets/icomoon/fonts/icomoon.eot?#iefixre025g') format('embedded-opentype'),
+		url('/racks/assets/icomoon/fonts/icomoon.woff?re025g') format('woff'),
+		url('/racks/assets/icomoon/fonts/icomoon.ttf?re025g') format('truetype'),
+		url('/racks/assets/icomoon/fonts/icomoon.svg?re025g#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -542,4 +542,3 @@
 .icon-ellipsis:before {
 	content: "\e129";
 }
-

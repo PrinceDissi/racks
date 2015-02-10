@@ -55,12 +55,43 @@
         return $application.racks.registered.indexOf(component) >= 0;
     };
 
+    var onready = function(handler) {
+        if(document && document.readyState === "complete") return handler();
+        // non-IE: DOMContentLoaded
+        if(window.addEventListener) {
+            window.addEventListener("DOMContentLoaded",handler,false);
+        // IE top frame: use scroll hack
+        } else if(window.attachEvent && window==window.top) {
+            if(_readyQueue.push(handler) == 1) {
+                _readyIEtop();
+            }
+        // IE frame: use onload
+        } else if(window.attachEvent) {
+            window.attachEvent("onload", handler);
+        }
+    };
+
+    // IE stuff
+    var _readyQueue = [];
+    var _readyIEtop = function() {
+        try {
+            var fn;
+            document.documentElement.doScroll("left");
+            while((fn = _readyQueue.shift()) != undefined) {
+                fn();
+            }
+        } catch(err) {
+            setTimeout(_readyIEtop,50);
+        }
+    };
+
     var validRackEvent = function(ev) {
         return [
             'attached',
             'detached',
             'created',
-            'attributeChanged'
+            'attributeChanged',
+            'domReady'
         ].indexOf(ev) > -1;
     };
 
@@ -99,7 +130,7 @@
                 prototype: racksProto
             });
         }
-    }
+    };
 
     function RacksElement(element, options, node) {
         var RacksHtmlProto = Object.create(HTMLElement.prototype);
@@ -125,7 +156,11 @@
                 (options['attributeChanged'] || noop)(this);
             }
         };
-        var RacksPrototype = extend(RacksHtmlProto, eventTransform(this.handlers));
+        this.handlers = eventTransform(this.handlers);
+        onready(function() {
+            (options['domReady'] || noop)();
+        });
+        var RacksPrototype = extend(RacksHtmlProto, this.handlers);
         this.name = element;
         this.constructor = racksConstructor(this.name, RacksPrototype);
     }
@@ -175,4 +210,7 @@
     $application.Racks = Racks;
     $application.racks = racks;
     $application.Racks.Root = racks.create.root();
+
+
+
 })(window);
