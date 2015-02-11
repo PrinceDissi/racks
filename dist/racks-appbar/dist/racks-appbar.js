@@ -1,14 +1,11 @@
 (function() {
-    var currentScript = document._currentScript || document.currentScript;
+    var script = document._currentScript || document.currentScript;
 
     var RacksAppbarElementPrototype = Object.create(HTMLElement.prototype);
 
     RacksAppbarElementPrototype.attachedCallback = function() {
-        var imports = currentScript.ownerDocument;
-        var template = imports.querySelector('#racks-appbar-template');
-
-        // fix styling for polyfills
-        Racks.Util.ShimStyles(template.querySelectorAll('style'), 'racks-appbar');
+        var template = Racks.Get.Template(script, 'racks-appbar');
+        Racks.Shim.Styles(template, 'racks-appbar');
 
         // create shadow root
         var shadowRoot = this.createShadowRoot();

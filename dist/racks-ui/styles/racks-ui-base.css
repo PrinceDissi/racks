@@ -1,6 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,300);
 
-body /deep/ * {
+body {
     font-family: 'Robot', 'Helvetica Neue', Arial, sans-serif;
     font-weight: 300;
 }
