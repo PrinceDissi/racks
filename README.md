@@ -5,11 +5,24 @@ downloading a [ZIP File](https://github.com/janbiasi/racks/archive/master.zip) i
 you'd like to use the latest (**unstable!**) release from the Master Branch or grab
 the latest [Release](https://github.com/janbiasi/racks/releases) from Racks.
 
+###Bower
 ```sh
-$ bower install --save racks
+$ npm install -g bower
+$ bower install racks --save
 ```
 
-*That's it!*
+###Contribute and Fork
+```sh
+$ git clone git@github.com:janbiasi/racks.git
+$ cd racks
+$ git checkout -f master
+```
+
+###Manual
+1. Go to [https://github.com/janbiasi/racks/releases](https://github.com/janbiasi/racks/releases)
+2. Download the latest Release
+3. Unpack the files into your directory
+
 
 #Building custom Components
 ###Templates and Bootstrap
