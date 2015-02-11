@@ -1,0 +1,24 @@
+<link rel="import" href="../racks-common/racks-common.html">
+<link rel="import" href="../racks-button/dist/racks-button.html">
+<link rel="import" href="../docs-header/docs-header.html">
+<link rel="import" href="../docs-footer/docs-footer.html">
+<template id="docs-sheet-template">
+    <style>
+        :host {
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 250px;
+            bottom: 0;
+            overflow-y: scroll;
+        }
+    </style>
+    <div class="header">
+        <content select="docs-header"></content>
+        <div class="scroll-area">
+            <content select="docs-content"></content>
+        </div>
+        <content select="docs-footer"></content>
+    </div>
+</template>
+<script src="docs-sheet.js"></script>
