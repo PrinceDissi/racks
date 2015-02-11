@@ -1,3 +1,45 @@
+#Installation
+Racks can be installed via [Bower](https://bower.io/)! If you don't have bower installed
+or if you want to share it to someone / something else, you can also install it by
+downloading a [ZIP File](https://github.com/janbiasi/racks/archive/master.zip) if
+you'd like to use the latest (**unstable!**) release from the Master Branch or grab
+the latest [Release](https://github.com/janbiasi/racks/releases) from Racks.
+
+```sh
+$ bower install --save racks
+```
+
+*That's it!*
+
+#Building custom Components
+###Templates and Bootstrap
+You can use the templates for custom components (HTML and JavaScript), located in
+the public [GitHub Repository](https://github.com/janbiasi/racks/tree/master/templates).
+
+###Structured Content
+Create a folder e.G. in the root of your folder, called <code>racks-custom</code>,
+where you create a folder for every single component, with a revision or dist
+folder below it. So, the structure would look like this;
+
+```
+racks-custom/
+   |
+   + my-element/
+   |   |
+   |   + v1.0.0/
+   |   |   |
+   |   |   + my-element.html
+   |   |   + my-element.js
+   + my-other-element
+   ....
+```
+
+###Register the Component
+To add the component to racks, you have to edit the <code>racks.html</code> in
+the dist root of the bower installation. Add the path of each custom component
+into the import file to grant 100% support in the latest major browsers. You can
+also create a custom importer **at your own risk**.
+
 #Racks Components
 ###General Information
 #####Attributes
