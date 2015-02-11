@@ -1,5 +1,6 @@
 (function() {
-    function shimShadowStyles(styles, tag) {
+    function shimShadowStyles(template, tag) {
+        var styles = template.querySelectorAll('style');
         if (!Platform.ShadowCSS) {
             return;
         }
@@ -7,9 +8,22 @@
             var style = styles[i];
             var cssText = Platform.ShadowCSS.shimStyle(style, tag);
             Platform.ShadowCSS.addCssToDocument(cssText);
-            console.log(style);
             style.remove();
         }
+    }
+
+    function getStyleElements(template) {
+        return template.querySelectorAll('style');
+    }
+
+    function getTemplateElement(script, name) {
+        var owner = script.ownerDocument;
+        if(!owner) {
+            console.warn('Cant find owner document of ' + name);
+            return;
+        }
+        var template = owner.querySelector('#' + name);
+        return template.content;
     }
 
     function requestAnimationFrame() {
@@ -18,17 +32,39 @@
                 function (fn) { setTimeout(fn, 16); };
     }
 
+    function registerRacksComponent(settings) {
+        if(!settings || !settings['name'] || !settings['prototype']) {
+            console.error(
+                'Need a name and prototype to register ' +
+                'a new rack component in [Racks.Register]'
+            );
+        }
+        var proto = settings['prototype'],
+            name = settings['name'],
+            definition = settings['namespace'];
+        if(!window[proto]) {
+            window[definition] = document.registerElement(name, {
+                prototype: proto
+            });
+        } else {
+            console.info('Already registered an element ' + name);
+        }
+    }
+
 
     var Racks = {
+        Get: {
+            Styles: getStyleElements,
+            Template: getTemplateElement
+        },
+        Shim: {
+            Styles: shimShadowStyles,
+        },
         Util: {
-            ShimStyles: shimShadowStyles,
-            AnimationFrame: {
-                Request: requestAnimationFrame,
-                Skip: function(fn){
-                    requestAnimationFrame(function() {
-                        requestAnimationFrame(fn);
-                    });
-                }
+            SkipAnimationFrame: function(fn){
+                requestAnimationFrame(function() {
+                    requestAnimationFrame(fn);
+                });
             }
         }
     };

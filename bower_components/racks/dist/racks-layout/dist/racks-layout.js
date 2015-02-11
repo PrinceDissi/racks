@@ -1,14 +1,11 @@
 (function() {
-    var currentScript = document._currentScript || document.currentScript;
+    var script = document._currentScript || document.currentScript;
 
     var RacksLayoutElementPrototype = Object.create(HTMLElement.prototype);
 
     RacksLayoutElementPrototype.attachedCallback = function() {
-        var imports = currentScript.ownerDocument;
-        var template = imports.querySelector('#racks-layout-template');
-
-        // fix styling for polyfills
-        Racks.Util.ShimStyles(template.querySelectorAll('style'), 'racks-layout');
+        var template = Racks.Get.Template(script, 'racks-layout-template');
+        Racks.Shim.Styles(template, 'racks-layout');
 
         // create shadow root
         var shadowRoot = this.createShadowRoot();

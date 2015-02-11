@@ -1,18 +1,15 @@
 (function() {
-    var currentScript = document._currentScript || document.currentScript;
+    var script = document._currentScript || document.currentScript;
 
     var RacksMenuElementPrototype = Object.create(HTMLElement.prototype);
 
     RacksMenuElementPrototype.attachedCallback = function() {
-        var imports = currentScript.ownerDocument;
-        var template = imports.querySelector('#racks-menu-template');
-
-        // fix styling for polyfills
-        Racks.Util.ShimStyles(template.querySelectorAll('style'), 'racks-menu');
+        var template = Racks.Get.Template(script, 'racks-menu-template');
+        Racks.Shim.Styles(template, 'racks-menu');
 
         // create shadow root
         var shadowRoot = this.createShadowRoot();
-        shadowRoot.appendChild(template.content.cloneNode(true));
+        shadowRoot.appendChild(template.cloneNode(true));
     };
 
     if(!window.RacksMenuElement) {

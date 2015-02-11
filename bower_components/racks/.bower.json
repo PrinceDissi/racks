@@ -1,5 +1,6 @@
 {
   "name": "racks",
+  "version": "2.0.0",
   "homepage": "https://github.com/janbiasi/racks",
   "authors": [
     "Jan Biasi <biasijan@gmail.com>"
@@ -21,14 +22,13 @@
     "test",
     "tests"
   ],
-  "_release": "fc5806e4d2",
+  "_release": "2.0.0",
   "_resolution": {
-    "type": "branch",
-    "branch": "master",
-    "commit": "fc5806e4d2a89417aac22c9c2503f2fafacdbb85"
+    "type": "version",
+    "tag": "v2.0.0",
+    "commit": "8ae742f80eaf231786783169cf9309d52f796639"
   },
   "_source": "git://github.com/janbiasi/racks.git",
   "_target": "*",
-  "_originalSource": "racks",
-  "_direct": true
+  "_originalSource": "racks"
 }
