@@ -1,0 +1,34 @@
+{
+  "name": "racks",
+  "homepage": "https://github.com/janbiasi/racks",
+  "authors": [
+    "Jan Biasi <biasijan@gmail.com>"
+  ],
+  "description": "UI Web Components for Modern WebApps",
+  "main": "dist/racks.html",
+  "keywords": [
+    "webcomponents",
+    "shadowdom",
+    "imports",
+    "ui",
+    "components"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "fc5806e4d2",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "fc5806e4d2a89417aac22c9c2503f2fafacdbb85"
+  },
+  "_source": "git://github.com/janbiasi/racks.git",
+  "_target": "*",
+  "_originalSource": "racks",
+  "_direct": true
+}

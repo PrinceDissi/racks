@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Jan Biasi">
+    <meta name="keywords" content="webcomponents,shadowdom,components,polymer,bricks,xtags,ui,simpleui,flatdesig,flat">
+    <meta name="description" content="Racks is a OpenSource project inspired by Google's Polymer and Mozilla's Brich and X-Tags project. Racks implements the modern WebComponents Interface for easy using custom elements">
+    <link href="shortcut icon" type="image/png" href="external/logo.png">
+    <title>Racks - Custom HTML</title>
+    <script src="bower_components/webcomponents.js/webcomponents.min.js"></script>
+    <link rel="import" href="bower_components/racks/dist/racks.html">
+    <link rel="stylesheet" href="style/page.css">
+</head>
+<body>
+    <racks-layout>
+        <aside>
+            <h2>
+                <img src="external/logo.png" class="thumb-logo">
+                Racks
+            </h2>
+            <racks-menu>
+                <a href="#">
+                    <i class="icon-aircraft-take-off"></i>
+                    Getting Started
+                </a>
+                <a href="#">
+                    <i class="icon-open-book"></i>
+                    Resources &amp; Guides
+                </a>
+                <a href="#">
+                    <i class="icon-box"></i>
+                    Components
+                </a>
+            </racks-menu>
+        </aside>
+        <main>
+            <docs-sheet>
+                <docs-header class="pink-light">
+                    <h1>Getting started</h1>
+                    <p>Basics</p>
+                </docs-header>
+                <docs-content>
+                    <h2>Welcome to Racks</h2>
+                    <p>
+                        Racks is a framework which implements the <a href="http://www.w3.org/TR/components-intro/">
+                        WebComponents</a> and <a href="http://www.w3.org/TR/shadow-dom/">Shadow DOM</a> standards (drafts)
+                        written by the <a href="http://w3.org/">W3C</a> organization. It's supported in the major browsers,
+                        which are on the highest stand of implementation of these standards.
+                    </p>
+                    <p>
+                        This little piece of software is inspired by the
+                        <a href="https://www.polymer-project.org/" title="Polymer by Google">Polymer Project</a> and
+                        the <a href="http://www.x-tags.org/" title="X-Tags by Mozilla">X-Tags Project</a> which
+                        both implement one or more interface(s) to create custom tags.
+                    </p>
+                    <h2>About Rack</h2>
+                    <p>
+                        There are a few things which most of the user/developer wants to
+                        know before using a framework.
+                    </p>
+                    <h3>For who or what is Rack?</h3>
+                    <p>
+                        So, racks is a kind of tiny, easy-to-use UI components library,
+                        which helps you building any type of WebApplication. There can
+                        also be added new tags to Racks; <em>Inspect the DOM if you don't beleave me</em>!
+                    </p>
+                    <h3>Writing with Rack</h3>
+                    <p>
+                        Here's a short introduction code snippet from Gist by GitHub, which you could
+                        copy and paste into your index file.
+                    </p>
+                    <script src="https://gist.github.com/janbiasi/2d6b59b6f326f8b63df2.js"></script>
+                </docs-content>
+                <docs-footer>
+                    <racks-button class="primary">
+                        <a href="https://github.com/janbiasi/racks/releases/tag/v1.1.0" target="_blank">
+                            <i class="icon-download"></i>
+                            Get Racks
+                        </a>
+                    </racks-button>
+                    <p class="lic-note">
+                        &copy; 2015 by the Racks Authors. All rights reserved,
+                        licensed under the <a href="https://github.com/janbiasi/racks/blob/master/LICENSE">MIT License</a>.
+                    </p>
+                </docs-footer>
+            </docs-sheet>
+        </main>
+    </racks>
+</body>
+</html>

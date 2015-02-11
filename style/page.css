@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+body /deep/ *.gist {
+    font-family: monospace;
+}
+
+body,
+html,
+racks-layout {
+    height: 100%;
+}
+
+aside,
+main {
+    position: fixed;
+    top: 0;
+    height: 100%;
+}
+
+aside {
+    z-index: 2;
+    left: 0;
+    width: 250px;
+    background-color: #eee;
+}
+
+/* Title and ico*/
+aside h2 {
+    margin: 20px 0 20px 25px;
+    line-height: 40px;
+}
+
+aside h2 img {
+    margin-right: 5px;
+    float: left;
+    width: 40px;
+}
+
+/* Sidebar nav */
+aside racks-menu {
+    padding: 0;
+    border-top: 1px solid #ddd;
+}
+
+aside racks-menu a {
+    border-bottom: 1px solid #ddd !important;
+    padding-left: 20px !important;
+    text-decoration: none;
+}
+
+aside racks-menu a i {
+    margin-right: 15px;
+}
+
+/* Main part */
+main {
+    right: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* Code snippets */
+.gist-file .gist-meta {
+    display: none;
+}
+
+.gist-file .file-data table {
+    background-color: transparent;
+}
+
+.gist-file .file-data {
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border:  1px solid #527496;
+}
+
+.gist-file .gist-data.gist-syntax {
+    border-bottom: none;
+}
+
+.gist .gist-file {
+    border: none !important;
+}
+
+.gist .gist-file .line-data {
+    padding: .6rem 0 .6rem .7rem !important;
+}
+
+.gist .line-numbers {
+    padding-right: 7px !important;
+    color: #527496 !important;
+    border-color: #527496 !important;
+    /*display: none !important;*/
+}
+
+.gist .gist-file .pl-ent,
+.gist .gist-file .pl-e,
+.gist .gist-file .pl-en {
+    color: #fe6075;
+}
+
+.gist .gist-file .pl-e {
+    color: #527496;
+}
+
+.gist .gist-file .pl-s1 {
+    color: #f1c40f;
+}
