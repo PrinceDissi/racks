@@ -4,12 +4,12 @@
     var RacksAppbarElementPrototype = Object.create(HTMLElement.prototype);
 
     RacksAppbarElementPrototype.attachedCallback = function() {
-        var template = Racks.Get.Template(script, 'racks-appbar');
+        var template = Racks.Get.Template(script, 'racks-appbar-template');
         Racks.Shim.Styles(template, 'racks-appbar');
 
         // create shadow root
         var shadowRoot = this.createShadowRoot();
-        shadowRoot.appendChild(template.content.cloneNode(true));
+        shadowRoot.appendChild(template.cloneNode(true));
     };
 
     RacksAppbarElementPrototype.openDrawer = function() {

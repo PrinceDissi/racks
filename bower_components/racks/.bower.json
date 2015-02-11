@@ -1,6 +1,6 @@
 {
   "name": "racks",
-  "version": "2.0.0",
+  "version": "2.0.3",
   "homepage": "https://github.com/janbiasi/racks",
   "authors": [
     "Jan Biasi <biasijan@gmail.com>"
@@ -17,16 +17,18 @@
   "license": "MIT",
   "ignore": [
     "**/.*",
+    "README.md",
+    "assets",
     "node_modules",
     "bower_components",
     "test",
     "tests"
   ],
-  "_release": "2.0.0",
+  "_release": "2.0.3",
   "_resolution": {
     "type": "version",
-    "tag": "v2.0.0",
-    "commit": "8ae742f80eaf231786783169cf9309d52f796639"
+    "tag": "v2.0.3",
+    "commit": "1285012dd30511d4f5002fb225f10d1e78d832ca"
   },
   "_source": "git://github.com/janbiasi/racks.git",
   "_target": "*",

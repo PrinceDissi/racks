@@ -9,7 +9,7 @@
 
         // create shadow root
         var shadowRoot = this.createShadowRoot();
-        shadowRoot.appendChild(template.content.cloneNode(true));
+        shadowRoot.appendChild(template.cloneNode(true));
     };
 
     RacksLayoutElementPrototype.openDrawer = function() {

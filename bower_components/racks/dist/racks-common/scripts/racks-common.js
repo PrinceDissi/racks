@@ -23,6 +23,13 @@
             return;
         }
         var template = owner.querySelector('#' + name);
+        if(!template || !template.content) {
+            console.error(
+                'Can\'t fetch content of the template "' +
+                name + '", check your related .js file'
+            );
+            return false;
+        }
         return template.content;
     }
 
@@ -51,8 +58,12 @@
         }
     }
 
+    function fireOnReady(handler) {
+        Racks.__queue.push(handler);
+    }
 
     var Racks = {
+        __queue: [],
         Get: {
             Styles: getStyleElements,
             Template: getTemplateElement
@@ -66,7 +77,8 @@
                     requestAnimationFrame(fn);
                 });
             }
-        }
+        },
+        Ready: fireOnReady
     };
 
     // Assign to window
