@@ -1,4 +1,14 @@
 /**
+* @license
+* Copyright (c) 2015 Jan R. Biasi. All Rights reserved.
+* Subjected framework is racked which makes use of modern
+* Shadow DOM and webcomponents technology. This snippet
+* hides the body until all components are loaded and afterwards
+* it will be faded in within the event.
+*/
+window.addEventListener('DOMContentLoaded',function(){var w=window,s=document.body.style;s.opacity=0;w.addEventListener('WebComponentsReady',function(){s.opacity = 1;});});
+
+/**
  * @license
  * Copyright (c) 2014 The Polymer Project Authors. All rights reserved.
  * This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
