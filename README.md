@@ -8,9 +8,14 @@ the latest [Release](https://github.com/janbiasi/racks/releases) from Racks.
 ###Bower
 ```sh
 $ npm install -g bower
-$ bower install racks --save
+$ bower install racks
+```
+###NPM
+```sh
+$ npm install racks-kit --save
 ```
 
+#Other Information
 ###Contribute and Fork
 ```sh
 $ git clone git@github.com:janbiasi/racks.git
