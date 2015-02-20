@@ -1,0 +1,28 @@
+{
+  "name": "racks",
+  "version": "2.0.5",
+  "homepage": "https://github.com/janbiasi/racks",
+  "authors": [
+    "Jan Biasi <biasijan@gmail.com>"
+  ],
+  "description": "UI Web Components for Modern WebApps",
+  "main": "dist/racks.html",
+  "keywords": [
+    "webcomponents",
+    "shadowdom",
+    "imports",
+    "ui",
+    "components"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "README.md",
+    "assets",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "templates"
+  ]
+}

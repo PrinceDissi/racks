@@ -1,0 +1,12 @@
+/**
+ * Force all custom elements and their children
+ * inside to behave as a bordered-box sized element,
+ * also remove the tap highlight color (webkit attribute)
+ */
+body /deep/,
+body /deep/ * {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
