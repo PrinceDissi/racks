@@ -1,0 +1,27 @@
+{
+  "name": "racks",
+  "version": "1.1.0",
+  "description": "Webcomponents and custom elements made easy",
+  "main": "README.md",
+  "scripts": {
+    "test": "exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/janbiasi/racks.git"
+  },
+  "keywords": [
+    "webcomponents",
+    "shadowdom",
+    "shadowroot",
+    "customhtml",
+    "html",
+    "tags"
+  ],
+  "author": "Jan Biasi <biasijan@gmail.com> (http://janbiasi.ch/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/janbiasi/racks/issues"
+  },
+  "homepage": "https://github.com/janbiasi/racks"
+}
