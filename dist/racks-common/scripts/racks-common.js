@@ -39,25 +39,6 @@
                 function (fn) { setTimeout(fn, 16); };
     }
 
-    function registerRacksComponent(settings) {
-        if(!settings || !settings['name'] || !settings['prototype']) {
-            console.error(
-                'Need a name and prototype to register ' +
-                'a new rack component in [Racks.Register]'
-            );
-        }
-        var proto = settings['prototype'],
-            name = settings['name'],
-            definition = settings['namespace'];
-        if(!window[proto]) {
-            window[definition] = document.registerElement(name, {
-                prototype: proto
-            });
-        } else {
-            console.info('Already registered an element ' + name);
-        }
-    }
-
     function fireOnReady(handler) {
         Racks.__queue.push(handler);
     }
