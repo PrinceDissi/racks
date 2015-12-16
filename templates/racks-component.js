@@ -61,7 +61,7 @@
     if(!window.RacksButtonElement) {
 
         // don't forget to add access to the constructor via the window
-        window.RacksButtonElement = document.registerElement('racks-component', {
+        Racks.Elements.RacksButtonElement = document.registerElement('racks-component', {
 
             // assign the prototype created above to the prototype
             prototype: RacksComponenetElement

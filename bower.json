@@ -1,6 +1,6 @@
 {
-  "name": "racks",
-  "version": "2.0.5",
+  "name": "racksjs",
+  "version": "3.0.0",
   "homepage": "https://github.com/janbiasi/racks",
   "authors": [
     "Jan Biasi <biasijan@gmail.com>"
@@ -24,5 +24,8 @@
     "test",
     "tests",
     "templates"
-  ]
+  ],
+  "dependencies": {
+    "webcomponentsjs": "~0.7.20"
+  }
 }
