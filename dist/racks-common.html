@@ -1,4 +1,4 @@
-/* global platform */
+<script type="text/javascript">
 (function() {
     function shimShadowStyles(template, tag) {
         var styles = template.querySelectorAll('style');
@@ -44,33 +44,26 @@
         Racks.__queue.push(handler);
     }
 
-    var Racks = {
-        __queue: [],
-        Get: {
+    Racks.__queue = [];
+    Racks.Get = {
             Styles: getStyleElements,
             Template: getTemplateElement
-        },
-        Shim: {
-            Styles: shimShadowStyles,
-        },
-        Util: {
-            SkipAnimationFrame: function(fn){
-                requestAnimationFrame(function() {
-                    requestAnimationFrame(fn);
-                });
-            }
-        },
-        Elements: {},
-        Ready: fireOnReady
     };
+    Racks.Shim = {
+            Styles: shimShadowStyles
+    };
+    Racks.Util = {
+        SkipAnimationFrame: function(fn) {
+            requestAnimationFrame(function() {
+                requestAnimationFrame(fn);
+            });
+        }
+    };
+    Racks.Elements = {};
+    Racks.Ready = fireOnReady;
 
     // Assign to window
     window.Racks = Racks;
-    
-    // Call handlers for finished imports
-    window.addEventListener('HTMLImportsLoaded', function() {
-        Racks.__queue.forEach(function(handler) {
-            handler();
-        });
-    });
 })();
+</script>
+<link rel="import" href="./lib/telemetry.html">

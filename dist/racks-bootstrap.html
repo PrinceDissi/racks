@@ -1,0 +1,44 @@
+<script type="text/javascript">
+    var userRacks = window.Racks;
+    window.Racks = function(that, prototype) {
+        var id = prototype.module;
+        var proto = prototype;
+        var glob = id.replace(/-([a-z])/g, function (g) {
+            return g[1].toUpperCase();
+        });
+        glob = glob.charAt(0).toUpperCase() + glob.slice(1);
+
+        if(prototype.prototype) {
+            prototype = prototype.prototype;
+        }
+
+        var options = {
+            prototype: prototype
+        };
+
+        if(prototype.extends) {
+            options.extends = prototype.extends
+        };
+
+        prototype = Racks.Factory.create(prototype);
+        var script = that.document._currentScript || that.document.currentScript;
+
+        Racks.telemetry._register(glob);
+        Racks.Elements[glob] = document.registerElement(id, options);
+
+        Racks.Elements[glob].createdCallback = function() {
+            if(proto.handler.beforeCreate) {
+                proto.handler.beforeCreate(that);
+            }
+
+            var shadowRoot = prototype.createShadowRoot();
+            var template = Racks.Get.Template(script, id);
+            Racks.Shim.Styles(template, id);
+            shadowRoot.appendChild(template.cloneNode(true));
+
+            if(proto.handler.afterCreate) {
+                proto.handler.afterCreate(that);
+            }
+        };
+    }
+</script>

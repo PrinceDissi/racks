@@ -13,7 +13,7 @@ var pubfiles = [
 gulp.task('precompile', function() {
     return gulp.src('./bower_components/webcomponentsjs/webcomponents.min.js')
         .pipe(rename('platform.js'))
-        .pipe(gulp.dest('./dist/'))
+        .pipe(gulp.dest('./src/provider/'))
 });
 
 gulp.task('bump:patch', function() {

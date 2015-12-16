@@ -1,0 +1,16 @@
+<script type="text/javascript">
+Racks.telemetry = {
+    instanceCount: 0,
+    registrations: [],
+    _logRegistration: function(name) {
+        console.log('[' + name + ']: registered')
+    },
+    _register: function(prototype) {
+        this.registrations.push(prototype);
+        this._logRegistration(prototype);
+    },
+    dumpRegistrations: function() {
+        this.registrations.forEach(this._logRegistration);
+    }
+};
+</script>

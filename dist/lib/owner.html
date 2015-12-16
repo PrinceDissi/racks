@@ -1,0 +1,9 @@
+<script type="text/javascript">
+    Object.defineProperty(window, 'currentImport', {
+        enumerable: true,
+        configurable: true,
+        get: function() {
+            return (document._currentScript || document.currentScript).ownerDocument;
+        }
+    });
+</script>
