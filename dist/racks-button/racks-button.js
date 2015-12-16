@@ -18,9 +18,7 @@
         this.setAttribute('role', 'button');
     };
 
-    if(!window.RacksButtonElement) {
-        window.RacksButtonElement = document.registerElement('racks-button', {
-            prototype: RacksButtonElementPrototype
-        });
-    }
+    Racks.Elements.RacksButtonElement = document.registerElement('racks-button', {
+        prototype: RacksButtonElementPrototype
+    });
 })();

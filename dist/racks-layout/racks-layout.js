@@ -27,11 +27,8 @@
             this.setAttribute('open', '');
         }
     };
-
-    if(!window.RacksLayoutElement) {
-        window.RacksLayoutElement = document.registerElement('racks-layout', {
-            prototype: RacksLayoutElementPrototype
-        });
-    }
-
+    
+    Racks.Elements.RacksLayoutElement = document.registerElement('racks-layout', {
+        prototype: RacksLayoutElementPrototype
+    });
 })();

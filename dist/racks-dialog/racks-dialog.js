@@ -45,10 +45,8 @@
         dialog.addEventListener('webkitAnimationEnd', animationendHandler);
     };
 
-    if(!window.RacksDialogElementPrototype) {
-        window.RacksDialogElementPrototype = document.registerElement('racks-dialog', {
-            prototype: RacksDialogElementPrototype
-        });
-    }
+    Racks.Elements.RacksDialogElementPrototype = document.registerElement('racks-dialog', {
+        prototype: RacksDialogElementPrototype
+    });
 
 })();

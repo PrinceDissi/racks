@@ -59,10 +59,8 @@
         setupHandler(this);
     };
 
-    if (!window.RacksActionElement) {
-        window.RacksActionElement = document.registerElement('racks-action', {
-            prototype: RacksActionElementPrototype
-        });
-    }
+    Racks.Elemenets.RacksActionElement = document.registerElement('racks-action', {
+        prototype: RacksActionElementPrototype
+    });
 
 })();

@@ -28,10 +28,7 @@
         }
     };
 
-    if(!window.RacksAppbarElement) {
-        window.RacksAppbarElement = document.registerElement('racks-appbar', {
-            prototype: RacksAppbarElementPrototype
-        });
-    }
-
+    Racks.Elements.RacksAppbarElement = document.registerElement('racks-appbar', {
+        prototype: RacksAppbarElementPrototype
+    });
 })();

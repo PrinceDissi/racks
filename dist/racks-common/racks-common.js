@@ -59,6 +59,7 @@
                 });
             }
         },
+        Elements: {},
         Ready: fireOnReady
     };
 
